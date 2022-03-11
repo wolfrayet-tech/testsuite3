@@ -98,7 +98,7 @@
       <div class="col-xl-4 col-lg-3">
         <div class="logo">
           <a href="index.html">
-            <img loading="lazy" class="img-fluid" src="images/logo.png" alt="logo">
+            <img loading="lazy" class="img-fluid" src="images/logo-denoised_sharpened_upscaled_x4.png" alt="logo">
           </a>
         </div>
       </div>
@@ -188,33 +188,41 @@
 <!--End Page Title-->
 
 <!-- Our Story -->
-<section class="story">
+
+<section class="story" style="background-image: url('https://cdn.pixabay.com/photo/2016/12/05/19/43/pill-1884775_960_720.jpg');background-size: cover;">
+
   <div class="container">
     <div class="row">
-      <div class="col-lg-6">
-        <img loading="lazy" src="images/services/service-one.jpg" class="responsive" alt="story">
-      </div>
-      <div class="col-lg-6">
-        <div class="story-content">
+        <div class="story-content" style="padding-left:20px;padding-right:20px;">
+
+          <div class="commit">
           <h2>Our commitment</h2>
         <!-- <h5 class="tagline">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, minima. Nemo impedit fuga nostrum expedita sint dicta ullam quam et harum velit saepe"</h6> -->
             <p>To be able to cure one's sickness is in itself a massive reponsibilty, and we as a workforce have always devoted ourself towards gaining the trust of our clients. 
               having said that, we have created a suitable work atmosphere that has always exerted superior performance in order to provide productivity and overall profitablity. 
               with perseverance, hard work and dedication we intend cater to your needs and exude full transperancy to make you feel valued and deterrmine to be your preference. </p>
-            <h6>Our Mission</h6>
+            </div>
+
+            <div class="commit">
+            <h2>Our Mission</h2>
             <p>having started from a small organisation in ahmedabad, our small but dedicated team has worked towards achieving our organisational goals to expand our business both 
               internally and externally. after being in the market for more than 5 years now, we have been able to expand our business in urban and suburban cities of gujarat and rajasthan. 
               with abundant r&d we have also increased the number of our products from 11 in 2016 to 30 in 2022. we have been able to use our capitals and resources to its fullest and ensure prudent 
               maufacturing and warehousing of our products.</p>
-            <h6>Our Vision</h6>
+            </div>
+            <div class="commit">
+
+            <h2>Our Vision</h2>
             <p>looking back to when we launched this company, we have always pushed ourself to the extremities to achieve our ambitions and goals towards our organisation. we aim towards building a business
               empire by spreading and networking our chains to initially the whole of west ind, advancing towards the north and subsequently reaching the east and south covering the whole indian 
               subcontinent. we look forward to collaborating with numerous investors and financial institutions to guide us through. we also plan on launching 20 new products essentially developing 
               new derma products eventually introducing new divions and a broader range of products . we aspire to be fully customer-centric. </p>
-        </div>
+            </div>
+
+            </div>
       </div>
     </div>
-  </div>
+
 </section>
 
 <!-- Promo Video -->
@@ -512,7 +520,43 @@
   <span class="icon fa fa-angle-up"></span>
 </div>
 
+<style>
+/*
+section {
+  background-size: cover;
+  color: white;
+  background-color: var(--bg, --color-black);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.image {
+  background-position: center center;
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. 
+  background-size: cover;
+  /* Keep the image from overlapping sibling elements. 
+  z-index: -1;
+  height: 100vh;
+}
+section.text {
+  height: 50vh;
+}
+section.heading {
+  z-index: -1;
+  transform: translateY(-30vh) translateZ(1px) scale(1.5);
+}
+*/
 
+
+  .commit{
+    opacity:0;
+  }
+  p{
+    color:#000000;
+  }
+</style>
 <!-- jquery -->
 <script src="plugins/jquery.min.js"></script>
 <!-- bootstrap -->
@@ -533,6 +577,28 @@
 
 <!-- script js -->
 <script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".commit").forEach(element => {
+  gsap.to(element, {
+    opacity: 1, 
+    duration:0.5,
+    ease: "none",
+    scrollTrigger: {
+      trigger: element,
+      start: "center 70%",
+      end: "center 30%",
+      toggleActions: "play reverse play reverse"
+    }
+  })
+});
+
+
+</script>
 </body>
 
 </html>
