@@ -866,7 +866,6 @@ button:focus {
 .form-control {
   box-shadow: none;
   border-radius: 0;
-  padding: 15px 20px;
   font-size: 14px;
 }
 

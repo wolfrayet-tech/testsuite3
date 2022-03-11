@@ -196,44 +196,58 @@ WEBSITE: https://themefisher.com
   <!-- container start -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-5 ">
-        <!-- address start -->
-        <div class="address-block">
-          <!-- Location -->
-          <div class="media">
-            <i class="far fa-map"></i>
-            <div class="media-body">
-              <h3>Location</h3>
-              <p>PO Box 16122 Collins Street West <br>Victoria 8007 Canada</p>
-            </div>
-          </div>
-          <!-- Phone -->
-          <div class="media">
-            <i class="fas fa-phone"></i>
-            <div class="media-body">
-              <h3>Phone</h3>
-              <p>
-                (+48) 564-334-21-22-34
-                <br>(+48) 564-334-21-22-38
-              </p>
-            </div>
-          </div>
-          <!-- Email -->
-          <div class="media">
-            <i class="far fa-envelope"></i>
-            <div class="media-body">
-              <h3>Email</h3>
-              <p>
-                info@templatepath.com
-                <br>info@cleanxer.com
-              </p>
-            </div>
-          </div>
+
+        <!-- container end -->
+  <div class="col-lg-4 col-md-5 ">
+    <br /> <br />
+    <br /> <br />
+    <br /> <br />
+
+    <!-- address start -->
+    <div class="address-block">
+      <!-- Location -->
+      <div class="media">
+        <i class="far fa-map"></i>
+        <div class="media-body">
+          <h3 onmouseover="enlarge(this)" onmouseleave="ensmall(this)">Location</h3>
+          <p>PO Box 16122 Collins Street West <br>Victoria 8007 Canada</p>
         </div>
-        <!-- address end -->
       </div>
-      <div class="col-lg-8 col-md-7">
-        <div class="contact-form">
+      <!-- Phone -->
+      <div class="media">
+        <i class="fas fa-phone"></i>
+        <div class="media-body">
+          <h3 onmouseover="enlarge(this)" onmouseleave="ensmall(this)">Phone</h3>
+          <p>
+            (+48) 564-334-21-22-34
+            <br>(+48) 564-334-21-22-38
+          </p>
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="media">
+        <i class="far fa-envelope"></i>
+        <div class="media-body">
+          <h3 onmouseover="enlarge(this)" onmouseleave="ensmall(this)">Email</h3>
+          <p>
+            info@templatepath.com
+            <br>info@cleanxer.com
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- address end -->
+  </div> 
+
+
+      <div class="col-md-6 col-md-4">
+        <div class="section-title">
+          <h3>Get
+            <span> in Touch <small>...</small></span>
+          </h3>
+          </div>
+        <div class="contact-form" style="margin-top: 70px !important;
+        padding-left: 0px !important">
           <!-- contact form start -->
           <form action="!#" class="row">
             <!-- name -->
@@ -244,83 +258,64 @@ WEBSITE: https://themefisher.com
             <div class="col-lg-6">
               <input type="email" class="form-control main" placeholder="Email" required>
             </div>
-            <!-- phone -->
-            <div class="col-lg-12">
-              <input type="text" class="form-control main" placeholder="Phone" required>
-            </div>
+              <div class="col-lg-12">
+              <input type="checkbox" class="" style="text-align:justify;" onclick="checkthis(this)">  &nbsp Want an Appointment?</input>
+            <br /><br />
+          </div>
+          <!--
+            <div class="col-md-6 col-md-6">
+              <div class="form-group">
+              <select name="industry" id="industry" class="form-control chosen-select">
+                  <option value="" disabled selected>Select Industry</option>
+                  <option value="financial-service">Financial Services</option>
+                  <option value="healthcare-lifescience">Healthcare & Life Science</option>
+                  <option value="communications">Communications</option>
+                </select>
+              </div>
+          </div>
+          <div class="col-md-6 col-md-6">
+          <div class="form-group">
+            <select class="form-control" name="subject">
+              <option>Departments</option>
+              <option>Diagnostic</option>
+              <option>Psychological</option>
+            </select>
+          </div>
+        </div>-->
+        <div class="col-md-6 col-md-6">
+          <div class="form-group">
+            <input class="form-control" type="text" name="Phone" placeholder="Phone" required="">
+          </div>
+          </div>
+          <div id="appointment" style="visibility:hidden;">
+          <div class="col-md-12 col-md-6">
+          <div class="form-group">
+            <input class="form-control" type="date" name="Date" placeholder="Date" required="" id="datepicker" autocomplete="off">
+          </div>
+        </div>
+      </div>
             <!-- message -->
             <div class="col-lg-12">
-              <textarea name="message" rows="10" class="form-control main" placeholder="Your message"></textarea>
+              <textarea name="message" id="query" rows="10" class="form-control main" placeholder="Your message"></textarea>
             </div>
-            <!-- submit button -->
-            <div class="col-md-12 text-right">
-              <button class="btn btn-style-one" type="submit">Send Message</button>
+
+            <div class="col-md-12">
+            <div class="form-group text-center" style="width:100%;">
+              <button type="submit" class="btn-style-one" style="width:100%;" id="above">submit now</button>
             </div>
+            </div>
+          </div>
           </form>
           <!-- contact form end -->
         </div>
       </div>
-    </div>
-  </div>
   <!--request appoitment-->
-  <div class="col-lg-6">
-    <div class="contact-area pl-0 pl-lg-5">
-<div class="section-title">
-<h3>Request
-  <span>Appointment</span>
-</h3>
-</div>
-<form name="contact_form" class="default-form contact-form" action="!#" method="post">
-<div class="row">
-  <div class="col-md-6">
-    <div class="form-group">
-      <input class="form-control" type="text" name="Name" placeholder="Name" required="">
-    </div>
-    <div class="form-group">
-      <input class="form-control" type="email" name="Email" placeholder="Email" required="">
-    </div>
-    <div class="form-group">
-      <select class="form-control" name="subject">
-        <option>Departments</option>
-        <option>Diagnostic</option>
-        <option>Psychological</option>
-      </select>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="form-group">
-      <input class="form-control" type="text" name="Phone" placeholder="Phone" required="">
-    </div>
-    <div class="form-group">
-      <input class="form-control" type="text" name="Date" placeholder="Date" required="" id="datepicker" autocomplete="off">
-      <i class="fa fa-calendar" aria-hidden="true"></i>
-    </div>
-    <div class="form-group">
-      <select class="form-control" name="subject">
-        <option>Doctor</option>
-        <option>Diagnostic</option>
-        <option>Psychological</option>
-      </select>
-    </div>
-  </div> 
-  <div class="col-md-12">
-    <div class="form-group">
-      <textarea class="form-control" name="form_message" placeholder="Your Message" required=""></textarea>
-    </div>
-    <div class="form-group text-center">
-      <button type="submit" class="btn-style-one">submit now</button>
-    </div>
-  </div>
-</div>
-</form>
-</div>
-  <!-- container end -->
 </section>
 <!--====  End of Contact Form  ====-->
 
 <section class="map">
   <!-- Google Map -->
-  <div id="map"></div>
+<div id ="map"></div>
 </section>
 <!--====  End of Google Map  ====-->
 
@@ -478,8 +473,42 @@ WEBSITE: https://themefisher.com
 <!-- timePicker -->
 <script src="plugins/timePicker/timePicker.js" defer></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- script js -->
 <script src="js/script.js"></script>
+<script src="js/cust_js.js"></script>
+
+<script>
+function checkthis(elem){
+  var apptment = document.getElementById("appointment");
+  var query = document.getElementById("query");
+  var btn = document.getElementById("above");
+
+//  apptment.style.transition="1s linear";
+  console.log(query);
+  if(elem.checked==true){
+  apptment.style.visibility="visible";
+  query.style.visibility="hidden";  
+  bring_submit_button_above(btn);
+}
+else{
+  apptment.style.visibility="hidden";
+  query.style.visibility="visible";
+  bring_submit_button_down(btn);
+}  
+}
+
+
+function enlarge(elem){
+  elem.style.transition="0.5s linear";
+  elem.style.transform = "scale(1.2)";
+}
+
+function ensmall(elem){
+  elem.style.transition="0.5s linear";
+  elem.style.transform = "scale(1)";
+}
+</script>
 </body>
 
 </html>
